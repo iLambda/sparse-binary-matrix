@@ -58,8 +58,7 @@ var Tmatrix = sbm.transpose(matrix)
 ```
 Transposes the given matrix.
 
-#### complement
-#### not
+#### complement, not
 ```js
 var matrix = sbm.not(matrix)
            = sbm.complement(matrix)
@@ -71,8 +70,7 @@ is false.
 
 #### or
 
-#### xor
-#### add
+#### xor, add
 ```js
 var matrix = sbm.xor(mA, mB)
            = sbm.add(mA, mB)
