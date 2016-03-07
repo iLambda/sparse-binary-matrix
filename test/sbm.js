@@ -14,6 +14,9 @@ var id = sbm.make(function(x, y) { return x == y }, {x: n, y: n})
 var mat = sbm.make(function (i, j) { return (i + j) % 2 === 0 }, {x: n, y: n})
 var mat2 = sbm.make([[1, 1, 0], [1, 0, 1], [0, 1, 1]])
 
+console.log(sbm.trace(id))
+console.log(id.data)
+
 console.log(sbm.matrix(mat))
 console.log(sbm.matrix(sbm.multiply(id, mat)))
 console.log(" ")
