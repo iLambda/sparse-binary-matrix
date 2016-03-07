@@ -1,0 +1,28 @@
+{
+  "name": "sparse-binary-matrix",
+  "version": "0.1.0",
+  "description": "A library that manipulates sparse binary matrices.",
+  "main": "lib/sbm.js",
+  "scripts": {
+    "test": "nodejs test/sbm.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iLambda/sparse-binary-matrix.git"
+  },
+  "keywords": [
+    "sparse",
+    "matrix",
+    "binary",
+    "smb"
+  ],
+  "author": "iLambda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iLambda/sparse-binary-matrix/issues"
+  },
+  "homepage": "https://github.com/iLambda/sparse-binary-matrix#readme",
+  "dependencies": {
+    "lodash": "^4.6.1"
+  }
+}
