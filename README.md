@@ -4,9 +4,9 @@ operate computations on them.
 This module is available on npm as [sparse-binary-matrix](https://www.npmjs.com/package/sparse-binary-matrix).
 
 This library has been designed in an idea to improve space complexity when storing
-those matrices. A simple matrix of size (m, n) holds m*n coefficients. Assuming
+those matrices. A simple matrix of size (m, n) holds m\*n coefficients. Assuming
 all the matrices are binary (a coefficient can only be 1 or 0), it can store matrices
-with only d*m*n coefficients, with 0 < d < 1 being the density of the matrix.
+with only d\*m\*n coefficients, with 0 < d < 1 being the density of the matrix.
 
 ## install
 If you're using node.js and npm, type into a terminal :
