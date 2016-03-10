@@ -59,7 +59,7 @@ var id = sbm.identity(n)
 ```
 Returns the identity matrix of dimension n.
 
-The time complexity of this method is O(n²)
+The time complexity of this method is O(n)
 
 #### zero
 ```js
@@ -67,7 +67,7 @@ var zero = sbm.zero(n)
 ```
 Returns a n dimension matrix full of zeros.
 
-The time complexity of this method is O(n²)
+The time complexity of this method is O(n)
 
 #### transpose
 ```js

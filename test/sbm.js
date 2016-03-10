@@ -9,11 +9,15 @@ var sbm = require('../lib/sbm.js')
 0 1
 */
 
-var n = 3
-var id = sbm.make(function(x, y) { return x == y }, {x: n, y: n})
+var n = 5
+var id = sbm.identity(n)
+var zero = sbm.zero(n)
 var mat = sbm.make(function (i, j) { return (i + j) % 2 === 0 }, {x: n, y: n})
 var mat3 = sbm.make(function (i, j) { return (i + j) % 2 === 0 }, {x: n, y: n})
 var mat2 = sbm.make([[1, 1, 0], [1, 0, 1], [0, 1, 1]])
+
+console.log(sbm.matrix(id))
+console.log(sbm.matrix(zero))
 
 console.log(sbm.trace(id))
 console.log(id.data)
@@ -23,6 +27,3 @@ console.log(sbm.equal(mat, mat2))
 
 console.log(sbm.matrix(mat))
 console.log(sbm.matrix(sbm.multiply(id, mat)))
-console.log(" ")
-console.log(sbm.matrix(mat2))
-console.log(sbm.matrix(sbm.multiply(id, mat2)))
