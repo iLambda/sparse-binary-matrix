@@ -13,6 +13,10 @@ If you're using node.js and npm, type into a terminal :
 ```sh
 $ npm install sparse-binary-matrix --save
 ```
+If you're using the browser, add to the beginning of your file:
+```html
+<script src="sbm.js"></script>
+```
 
 ## example
 ```js
@@ -32,8 +36,8 @@ var dimension = {x: [number of lines], y: [number of columns]}
 var matrix = sbm.make(source, dimension)
 ```
 Creates a sparse binary matrix from the given source : it can be a predicate
-depending on (i, j), or a row-based binary matrix.
-You need to specify the dimension only if you provide a predicate as source.
+depending on (i, j), or a line-based binary matrix.
+**You need to specify the dimension only if you provide a predicate as source.**
 
 The time complexity of this method is O(xy)
 
@@ -53,6 +57,14 @@ Returns true if the coefficient of the matrix (i, j) is true.
 
 The time complexity of this method is O(xy)
 
+#### equal
+```js
+sbm.equal(matrixA, matrixB)
+```
+Returns true if the matrices are equal.
+
+The time complexity of this method is O(xy²log(y))
+
 #### identity
 ```js
 var id = sbm.identity(n)
@@ -63,11 +75,21 @@ The time complexity of this method is O(n)
 
 #### zero
 ```js
-var zero = sbm.zero(n)
+var zero = sbm.zero(x, y)
 ```
-Returns a n dimension matrix full of zeros.
+Returns a (x, y) dimension matrix full of zeros.
+If only one argument is specified, the matrix will be square.
 
-The time complexity of this method is O(n)
+The time complexity of this method is O(x)
+
+#### one
+```js
+var one = sbm.one(x, y)
+```
+Returns a (x, y) dimension matrix full of ones.
+If only one argument is specified, the matrix will be square.
+
+The time complexity of this method is O(xy)
 
 #### transpose
 ```js
@@ -128,12 +150,6 @@ Returns the given matrix to power n.
 
 The time complexity of this method is O((x+y)xy²*log(n))
 
-#### isInversible
-```js
-var is = sbm.isInversible(matrix)
-```
-Returns true if the matrix is inversible.
-
 #### isSymmetric
 ```js
 var is = sbm.isSymmetric(matrix)
@@ -141,6 +157,14 @@ var is = sbm.isSymmetric(matrix)
 Returns true if the matrix is symmetric.
 
 The time complexity of this method is O(x²y²)
+
+#### popcount
+```js
+var cnt = sbm.popcount(matrix)
+```
+Returns the number of true coefficients inside the given matrix.
+
+The time complexity of this method is O(xy)
 
 #### density
 ```js
