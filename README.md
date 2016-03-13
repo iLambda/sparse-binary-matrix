@@ -5,8 +5,7 @@ This module is available on npm as [sparse-binary-matrix](https://www.npmjs.com/
 
 This library has been designed in an idea to improve space complexity when storing
 those matrices. A simple matrix of size (m, n) holds m\*n coefficients. Assuming
-all the matrices are binary (a coefficient can only be 1 or 0), it can store matrices
-with only d\*m\*n coefficients, with 0 < d < 1 being the density of the matrix.
+all the matrices are binary (a coefficient can only be 1 or 0), it can store matrices using only d\*m\*n < m\*n coefficients, with 0 < d < 1 being the density of the matrix.
 
 ## install
 If you're using node.js and npm, type into a terminal :
@@ -22,8 +21,8 @@ If you're using the browser, add to the beginning of your file:
 ```js
 var sbm = require('sparse-binary-matrix')
 
-// create a random sparse matrix of size 100x100
-sbm.make(function() { return Math.random() > 0.5 }, { x:100, y:100 })
+// create a random sparse matrix of size 100x100 and density of 0.2
+sbm.make(function() { return Math.random() < 0.2 }, { x:100, y:100 })
 ```
 
 ## api
