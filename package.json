@@ -1,6 +1,6 @@
 {
   "name": "sparse-binary-matrix",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A library that manipulates sparse binary matrices.",
   "main": "lib/sbm.js",
   "scripts": {
