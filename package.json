@@ -1,6 +1,6 @@
 {
   "name": "sparse-binary-matrix",
-  "version": "0.1.2",
+  "version": "0.1.1",
   "description": "A library that manipulates sparse binary matrices.",
   "main": "lib/sbm.js",
   "scripts": {
@@ -33,6 +33,8 @@
   },
   "devDependencies": {
     "browserify": "^13.0.0",
+    "tape": "^4.5.1",
+    "tape-catch": "^1.0.4",
     "uglifyjs": "^2.4.10"
   }
 }
